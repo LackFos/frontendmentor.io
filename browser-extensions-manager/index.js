@@ -95,10 +95,10 @@ function updateExtensionCards (extensions) {
                 <div class="extension__actions">
                   <button onclick="removeExtension('${extension.name}')" type="button" class="extension__remove muted-text" tabindex="-1">Remove</button>
     
-                  <button onclick="toggleSwitch(event, '${extension.name}')" class="switch ${extension.isActive ? "switch--active" : ""}">
+                  <div onclick="toggleSwitch(event, '${extension.name}')" class="switch ${extension.isActive ? "switch--active" : ""}">
                     <div class="switch__circle"></div>
                     <div class="switch__overlay"></div>
-                  </button>
+                  </div>
                 </div>
               </div>
         `

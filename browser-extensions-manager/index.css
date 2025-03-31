@@ -78,7 +78,7 @@ body {
 }
 
 .container {
-    padding: 40px 0;
+    padding: 40px 16px;
     display: flex;
 }
 
@@ -109,8 +109,10 @@ body {
 .section__header {
     margin-top: 72px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    gap: 8px;
 }
 
 .section__filters {
@@ -241,4 +243,11 @@ body {
 
 .attribution a {
     color: var(--red-600);
+}
+
+@media (max-width: 1024px) {
+    .section__body {
+        grid-template-columns: repeat(1, 1fr) !important;
+        grid-template-rows: repeat(1, 1fr) !important;
+    }
 }

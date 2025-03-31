@@ -1,3 +1,3 @@
 # frontendmentor.io
 
-[profile](https://www.frontendmentor.io/profile/LackFos)
+My Profile - [Click Here](https://www.frontendmentor.io/profile/LackFos)

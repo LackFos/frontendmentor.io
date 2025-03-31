@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>Frontend Mentor | Browser extensions manager UI</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="container__wrapper">
+        <header class="header card">
+          <img class="header__logo light-mode" src="./assets/images/logo.svg" alt="Browser Extension Manager">
+          <img class="header__logo dark-mode" style="display:none" src="./assets/images/logo-dark.svg" alt="Browser Extension Manager">
+
+          <button onclick="toggleTheme()" class="header__theme-toggle">
+            <img class="light-mode" src="./assets/images/icon-moon.svg" alt="Dark Mode">
+            <img class="dark-mode" style="display:none" src="./assets/images/icon-sun.svg" alt="Light Mode">
+          </button>
+        </header>
+
+        <section class="section">
+          <div class="section__header">
+            <h2>Extensions List</h2>
+
+            <div class="section__filters">
+              <button onclick="filterExtension(event, 'all')" data-filter="all" class="section__filter badge badge--active shadow">All</button>
+              <button onclick="filterExtension(event, 'active')" data-filter="active" class="section__filter badge shadow">Active</button>
+              <button onclick="filterExtension(event, 'inactive')" data-filter="inactive" class="section__filter badge shadow">Inactive</button>
+            </div>
+          </div>
+
+          <div id="extension-list" class="section__body"></div>
+        </section>
+
+        <div class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge"><b>Frontend Mentor</b></a>.
+          Coded by <a href="https://github.com/LackFos"><b>LackFos</b></a>.
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="./index.js" defer></script>
+</html>

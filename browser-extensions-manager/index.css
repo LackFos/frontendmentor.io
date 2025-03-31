@@ -1,0 +1,244 @@
+:root {
+    --font-family: "Noto Sans";
+
+    --shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px;
+
+    --text-color: hsl(232, 66%, 12%);
+    --page-background: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    --card-background: white;
+
+    --blue-700: hsl(232, 66%, 12%);
+    --blue-600: hsl(232, 37%, 19%);
+    --blue-500: hsl(232, 25%, 26%);
+    --blue-200: hsl(232, 10%, 47%);
+    --blue-100: hsl(232, 9%, 54%);
+
+    --red-700: hsl(3, 77%, 44%);
+    --red-600: hsl(3, 61% ,53%);
+    --red-500: hsl(3, 60% ,57%);
+
+    --gray-900: hsl(240, 0%, 58%);
+    --gray-800: hsl(240, 1%, 66%);
+    --gray-700: hsl(240, 1% ,73%);
+    --gray-600: hsl(240, 1% ,81%);
+    --gray-500: hsl(240, 3% ,89%);
+    --gray-400: hsl(240, 11% ,96%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--text-color);
+    background: var(--page-background);
+    font-family: var(--font-family), sans-serif;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.56rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+button {
+    font-family: var(--font-family), sans-serif;
+}
+
+.small-text {
+    font-size: 0.8rem;
+}
+
+.muted-text {
+    color: var(--gray-900)
+}
+
+.alert-text {
+    color: var(--red-500)
+}
+
+body {
+    background-color: var(--page-background);
+}
+
+.container {
+    padding: 40px 0;
+    display: flex;
+}
+
+.container__wrapper {
+    max-width: 1140px;
+    width: 100%;
+    margin: auto;
+}
+
+.header {
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__theme-toggle {
+    cursor: pointer;
+    height: 44px;
+    width: 44px;
+    background-color: var(--gray-500);
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section__header {
+    margin-top: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section__filters {
+    display: flex;
+    gap: 8px;
+}
+
+.section__filter {
+    cursor: pointer;
+    background: none;
+    border: none;
+    border-radius: 40px;
+}
+
+.section__body {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.extension {
+    display: flex;
+    flex-direction: column;
+}
+
+.extension__body {
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.extension__detail {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.extension__actions {
+    border-top: 1px solid var(--gray-500);
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.extension__remove {
+    cursor: pointer;
+    color: var(--gray-700);
+    font-weight: 500;
+    background: none;
+    border: none;
+}
+
+.extension__remove:hover {
+    color: var(--red-600)
+}
+
+.badge {
+    color: var(--text-color);
+    background-color: var(--card-background);
+    border: 1px solid var(--gray-700);
+    border-radius: 40px;
+    padding: 8px 16px;
+}
+
+.badge--active {
+    color: white;
+    background-color: var(--red-700);
+    border: 1px solid var(--red-700);
+}
+
+.switch {
+    position: relative;
+    cursor: pointer;
+    background: none;
+    border: none;
+    border-radius: 40px;
+}
+
+.switch__overlay {
+    width: 34px;
+    height: 18px;
+    background-color: var(--gray-600);
+    border-radius: 40px;
+    padding: 2px;
+    display: flex;
+}
+
+.switch__circle {
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 40px;
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+}
+
+.switch.switch--active .switch__overlay {
+    background-color: var(--red-700);
+}
+
+.switch.switch--active .switch__circle {
+    left: initial;
+    right: 3px;
+}
+
+.card {
+    background-color: var(--card-background);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--gray-500);
+    border-radius: 16px;
+}
+
+.shadow {
+    box-shadow: var(--shadow);
+}
+
+.attribution {
+    margin-top: 24px;
+    font-size: 11px; text-align: center;
+}
+
+.attribution a {
+    color: var(--red-600);
+}
